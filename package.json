@@ -1,0 +1,26 @@
+{
+  "name": "felica-web-js",
+  "version": "0.1.0",
+  "description": "Rewrite https://github.com/t-robop/felica-web with node.js 🎉",
+  "main": "reader.js",
+  "dependencies": {
+    "node-nfcpy-id": "^0.1.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/t-robop/felica-web-js.git"
+  },
+  "keywords": [
+    "JavaScript"
+  ],
+  "author": "multiverse2011",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/t-robop/felica-web-js/issues"
+  },
+  "homepage": "https://github.com/t-robop/felica-web-js#readme"
+}
