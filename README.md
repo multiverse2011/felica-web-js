@@ -9,7 +9,7 @@ v6.10.2 or later
 ### Python version
 v2.7.x
 
-### Operation System
+### Operating System
 - macOS
 - Linux
 
@@ -32,3 +32,6 @@ npm install
 ``` bash
 node reader.js
 ```
+
+## License
+MIT
