@@ -17,7 +17,7 @@ v2.7.x
 ### Mac
 ``` bash
 brew install node
-brew sudo pip install -U nfcpy-id-reader
+sudo pip install -U nfcpy-id-reader
 ```
 ``` bash
 git clone https://github.com/t-robop/felica-web-js
