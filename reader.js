@@ -1,12 +1,34 @@
+'use strict'
 const NfcpyId = require('node-nfcpy-id').default;
-const nfc = new NfcpyId({mode: 'non-touchend'}).start();
+const nfc = new NfcpyId();
+const express =  require('express');
+const app = express();
+const http = require('http').Server(app);
+const io = require('socket.io')(http);
+const PORT = process.env.PORT || 3000;
+
+app.get('/', (req, res) =>{
+    res.sendFile(__dirname + '/index.html');
+});
+
+io.on('connection', (socket => {
+    console.log("connected!");
+    socket.on('chat message', (msg) => {
+        console.log('message: ' + msg);
+    });
+}));
+
+http.listen(PORT, () => {
+    console.log('listeng on *:${PORT}');
+});
+
 
 nfc.on('touchstart', (card) => {
   console.log('touchstart:', card.id, 'type:', card.type);
-  console.log('5秒後に読み込みを再開します');
-  setTimeout(() => {
-    nfc.start();
-  }, 1000);
+});
+
+nfc.on('touchend', () =>{
+    console.log("touchend");
 });
 
 nfc.on('error', (err) => {
